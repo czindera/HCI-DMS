@@ -62,12 +62,36 @@
         </td>
         <td><p>  </p></td>
         <td>
-          <button class = "btn btn-sm btn-success" type='button' id='logOutButton'>Log out</button>
+          <button class = "btn btn-md btn-success" type='button' id='logOutButton'>Log out</button>
         </td>
+        <td>
+          <div id='documentsPane'>
+             <div id='documentsMenu'>
+
+        
+
+               <button class="btn btn-info btn-lg" id = 'uploadDocumentButton'>
+               <span class="glyphicon glyphicon-upload"></span> Upload document
+               </button>
+          </td>
+          <td>
+
+               <button class="btn btn-warning btn-lg" id = 'listDocumentsButton'>
+               <span class="glyphicon glyphicon-sort-by-attributes"></span> List All Documents
+               </button>
+               </div>
+              <div id='documentsMain'>
+               <div id='uploadDocumentPane'></div>
+               <div id='listDocumentsPane'></div>
+              </div>
+    </div>
+  </td>
+
       </tr>
     </table>  
-  
-<img src = "images/logo.png" />
+
+<hr class = "colorgraph_h1" />
+
 
 <div class="starter-template">
         <h1>Welcome to DMS Box</h1>
@@ -124,24 +148,7 @@
     <p>&copy; 2017 DMSbox.com. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer> 
 
-<div id='documentsPane'>
-        <div id='documentsMenu'>
 
-        
-
-          <button class="btn btn-info btn-lg" id = 'uploadDocumentButton'>
-            <span class="glyphicon glyphicon-upload"></span> Upload document
-          </button>
-          <!--
-          <button type='button' id='uploadDocumentButton'>Upload document</button>
-          <button type='button' id='listDocumentsButton'>List all documents</button>
-        -->
-        </div>
-        <div id='documentsMain'>
-          <div id='uploadDocumentPane'></div>
-          <div id='listDocumentsPane'></div>
-        </div>
-</div>
 
     <!--
     <div id='loggedIn'>
@@ -151,16 +158,6 @@
       <div id='adminPane'>
         <button type='button' id='resetButton'>Reset</button>
         <button type='button' id='addDefaultObjectsButton'>Add default documents and tags</button>
-      </div>
-      <div id='documentsPane'>
-        <div id='documentsMenu'>
-          <button type='button' id='uploadDocumentButton'>Upload document</button>
-          <button type='button' id='listDocumentsButton'>List all documents</button>
-        </div>
-        <div id='documentsMain'>
-          <div id='uploadDocumentPane'></div>
-          <div id='listDocumentsPane'></div>
-        </div>
       </div>
       <div id='tagsPane'>
         <div id='tagsMenu'>
