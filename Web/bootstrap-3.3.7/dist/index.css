@@ -38,6 +38,23 @@ td {
   padding: 10px;
 }
 
+.badge {
+  background-color: white;
+  color:black;
+}
+.nav-pills>li>a {
+  color: white;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #4ECDC4;
+  color:white;
+}
+
+.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
+  background-color: white;
+  color:black;
+}
+
 .back_button {
   height: 100px;
   width: 100px;
