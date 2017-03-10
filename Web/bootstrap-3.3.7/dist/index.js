@@ -23,6 +23,10 @@ $(function(){
 			updateDisplay();
 		});
 
+		$('#exampleModal').on('shown.bs.modal', function () {
+  			$('#myInput').focus()
+		})
+		
 		function updateDisplay() {
 			var isChecked = $checkbox.is(':checked');
 			// Set the button's state
