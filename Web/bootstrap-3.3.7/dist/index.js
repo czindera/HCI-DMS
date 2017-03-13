@@ -22,7 +22,25 @@ $(function(){
 		$checkbox.on('change', function () {
 			updateDisplay();
 		});
+		
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		function updateDisplay() {
 			var isChecked = $checkbox.is(':checked');
 			// Set the button's state
