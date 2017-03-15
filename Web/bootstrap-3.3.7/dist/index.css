@@ -7,6 +7,12 @@ body {
   width:100%;
   height:20%;
 }
+.starter-template1 {
+  padding: 40px 15px;
+  text-align: left;
+  width:100%;
+  height:20%;
+}
 .navbar {
 	background-color: #556270;
 }
