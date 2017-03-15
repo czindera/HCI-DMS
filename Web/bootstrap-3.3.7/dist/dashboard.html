@@ -106,21 +106,49 @@
           <a href = "index.html"><button class = "btn btn-md btn-success" type='button' id='logOutButton'>Log out</button></a>
         </td>
         <td>
-              <button type="button" class="btn btn-info btn-lg" id="uploadDocumentButton">
+
+
+              <button type="button" class="btn btn-info btn-lg" id="">
               <span class="glyphicon glyphicon-upload"></span> Upload document
               </button>
 
-                <dialog class="mdl-dialog">
+                <dialog class="mdl-dialog" style = "background-color:white; width:500px;">
                   <div class="mdl-dialog__content">
-                    <p>
-                      Allow this site to collect usage data to improve your experience?
-                    </p>
+                    <div id ="documentsMain">
+                    <table>
+                    <tr>
+                      <td>File:<td><td> <input type ="file"></td>
+                    </tr>
+                    <tr>
+                      <td>Additional Owners:<td><td> <input type ="text"></td>
+                    </tr>
+                    <tr>
+                      <td>Description:<td><td><textarea> </textarea></td>
+                    </tr>
+                    <tr>
+                      <td>Additional Owners:<td><td> <input type ="text"></td>
+                    </tr>
+                    <tr>
+                      <td>Tags:<td><td><span> <input type ="text"><button>generate tags</button></span></td>
+                    </tr>
+                     <tr>
+                      <td>Private:<td><td><input type ="checkbox" checked = "checked"></td>
+                    </tr>
+                    </table>    
+
+
+
+                    </div>  
                   </div>
                   <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
-                    <div id='documentsPane'>
-                      <div id='documentsMenu'>
-                      </div>
+
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <button type="button" class="btn btn-success btn-lg">Upload</button>
                     </div>  
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                     <button type="button" class="btn btn-danger btn-lg">Cancel</button>
+                    </div> 
                   
 
 
@@ -135,7 +163,7 @@
                   showModalButton.addEventListener('click', function() {
                     dialog.showModal();
                   });
-                  dialog.querySelector('.close').addEventListener('click', function() {
+                  dialog.querySelector('.btn-danger').addEventListener('click', function() {
                     dialog.close();
                   });
                 </script>              
