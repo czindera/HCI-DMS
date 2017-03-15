@@ -80,3 +80,19 @@ td {
 #save {
   width:480px;
 }
+
+.image-circle {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+ 
+}
+
+#user {
+  height: 200px;
+  width: 250px;
+  background-color: ;
+  position: relative;
+  left: 80%;
+  top: 0%;
+}
