@@ -14,6 +14,10 @@
 
     <title>DMS-Login</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -99,17 +103,44 @@
         </td>
         <td><p>  </p></td>
         <td>
-          <button class = "btn btn-md btn-success" type='button' id='logOutButton'>Log out</button>
+          <a href = "index.html"><button class = "btn btn-md btn-success" type='button' id='logOutButton'>Log out</button></a>
         </td>
         <td>
-          <div id='documentsPane'>
-             <div id='documentsMenu'>
+              <button type="button" class="btn btn-info btn-lg" id="uploadDocumentButton">
+              <span class="glyphicon glyphicon-upload"></span> Upload document
+              </button>
 
-        
-              <!--id = 'uploadDocumentButton' -->
-               <button class="btn btn-info btn-lg"  data-toggle="modal" data-target="#exampleModal">
-               <span class="glyphicon glyphicon-upload"></span> Upload document
-               </button>
+                <dialog class="mdl-dialog">
+                  <div class="mdl-dialog__content">
+                    <p>
+                      Allow this site to collect usage data to improve your experience?
+                    </p>
+                  </div>
+                  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+                    <div id='documentsPane'>
+                      <div id='documentsMenu'>
+                      </div>
+                    </div>  
+                  
+
+
+                  </div>
+                </dialog>
+                <script>
+                  var dialog = document.querySelector('dialog');
+                  var showModalButton = document.querySelector('.btn-info');
+                  if (! dialog.showModal) {
+                    dialogPolyfill.registerDialog(dialog);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog.showModal();
+                  });
+                  dialog.querySelector('.close').addEventListener('click', function() {
+                    dialog.close();
+                  });
+                </script>              
+
+
           </td>
           <td>
 
