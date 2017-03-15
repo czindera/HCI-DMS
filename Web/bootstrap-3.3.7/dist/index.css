@@ -69,6 +69,18 @@ td {
   top: 200px;
 }
 
+#sizing-addon2 {
+  width:120px;
+}
+
+#sizing-addon3 {
+  width:387px;
+}
+
+#save {
+  width:480px;
+}
+
 .image-circle {
   height: 5px;
   width: 5px;
@@ -84,24 +96,5 @@ td {
   left: 80%;
   top: 0%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
