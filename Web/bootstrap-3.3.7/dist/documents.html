@@ -93,17 +93,17 @@
         </div>
     </th>
     <th>
-      <div id="messagestitle" style = "position: absolute; left: 30%;">
+      <div id="messagestitle">
        <h1>Tags</h1>
     </div>
     </th>
     <th>
-      <div id = "user" style="position: absolute; left: 80%; top: 10%;"> 
+      <div id = "user"> 
       <table>
         <tr>
           <td>
           <div id="pratik">
-            <img class = "img-circle" src = "images/person.jpg" style = "width:120px; height: 120px;"/>
+            <img class = "img-circle" src = "images/person.jpg" style = "width:150px; height: 150px;"/>
           </div>
            </td>
         </tr>
@@ -123,69 +123,96 @@
     </tr>
   </table>
 </div>
-<br /><br /><br /><br /><br />
 
 <hr class = "colorgraph_h1" />
 
-               <button class="btn btn-success btn-lg" id = 'listDocumentsButton'>
-               <span class="glyphicon glyphicon-plus"></span> Create Tag
-               </button>
+<table>
+      <tr>
+        <td>
+           <h3><span id='loggedInAs'></span></h3>
+        </td>
+        <td><p>  </p></td>
+        <td>
 
-               <button class="btn btn-warning btn-lg" id = 'editTag'>
+
+              <button type="button" class="btn btn-success btn-lg" id="">
+              <span class="glyphicon glyphicon-plus"></span> Create Tag
+              </button>
+
+                <dialog class="mdl-dialog" style = "background-color:white; width:500px;">
+                  <div class="mdl-dialog__content">
+                    <div id ="documentsMain">
+                    <table>
+                    <tr>
+                      <td>File:<td><td> <input type ="file"></td>
+                    </tr>
+                    <tr>
+                      <td>Additional Owners:<td><td> <input type ="text"></td>
+                    </tr>
+                    <tr>
+                      <td>Description:<td><td><textarea> </textarea></td>
+                    </tr>
+                    <tr>
+                      <td>Additional Owners:<td><td> <input type ="text"></td>
+                    </tr>
+                    <tr>
+                      <td>Tags:<td><td><span> <input type ="text"><button>generate tags</button></span></td>
+                    </tr>
+                     <tr>
+                      <td>Private:<td><td><input type ="checkbox" checked = "checked"></td>
+                    </tr>
+                    </table>    
+
+
+
+                    </div>  
+                  </div>
+                  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <button type="button" class="btn btn-success btn-lg">Upload</button>
+                    </div>  
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                     <button type="button" class="btn btn-danger btn-lg">Cancel</button>
+                    </div> 
+                  
+
+
+                  </div>
+                </dialog>
+                <script>
+                  var dialog = document.querySelector('dialog');
+                  var showModalButton = document.querySelector('.btn-info');
+                  if (! dialog.showModal) {
+                    dialogPolyfill.registerDialog(dialog);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog.showModal();
+                  });
+                  dialog.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog.close();
+                  });
+                </script>              
+
+
+          </td>
+          <td>
+
+               <button class="btn btn-warning btn-lg" id = 'listDocumentsButton'>
                <span class="glyphicon glyphicon-pencil"></span> Edit Tag
                </button>
+               </div>
 
         </div>
      </td>
           <td>
-            <a href = "tags.html"><button class="btn btn-danger btn-lg" id="deleteTag">
+            <a href = "tags.html"><button class="btn btn-danger btn-lg" id="tagpagebutton">
             <span class="glyphicon glyphicon-remove"></span>Delete Tag</button>
-            <!-- The Modal -->
-              <div id="myModal" class="modal1">
-
-                <!-- Modal content -->
-                <div class="modal-content1">
-                  <span class="close1">&times;</span>
-                  <p>Some text in the Modal..</p>
-                </div>
-
-              </div>
-
-              <script>
-              // Get the modal
-              var modal = document.getElementById('myModal1');
-
-              // Get the button that opens the modal
-              var btn = document.getElementById("deleteTag");
-
-              // Get the <span> element that closes the modal
-              var span = document.getElementsByClassName("close1")[0];
-
-              // When the user clicks the button, open the modal 
-              btn.onclick = function() {
-                  modal.style.display = "block";
-              }
-
-              // When the user clicks on <span> (x), close the modal
-              span.onclick = function() {
-                  modal.style.display = "none";
-              }
-
-              // When the user clicks anywhere outside of the modal, close it
-              window.onclick = function(event) {
-                  if (event.target == modal) {
-                      modal.style.display = "none";
-                  }
-              }
-              </script>
           </td>
 
       </tr>
     </table>
-       
-            <a href = "tags.html"><button class="btn btn-danger btn-lg" id="tagpagebutton">
-            <span class="glyphicon glyphicon-remove"></span>Delete Tag</button>
-         
 
   </body>
 </html>

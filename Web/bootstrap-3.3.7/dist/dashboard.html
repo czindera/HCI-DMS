@@ -89,17 +89,17 @@
         </div>
     </th>
     <th>
-      <div id="messagestitle">
+      <div id="messagestitle" style = "position: absolute; left: 30%;">
        <h1>Welcome To DMS Box</h1>
     </div>
     </th>
     <th>
-      <div id = "user"> 
+      <div id = "user" style = "position: absolute; left: 80%; top: 10%;"> 
       <table>
         <tr>
           <td>
           <div id="pratik">
-            <img class = "img-circle" src = "images/person.jpg" style = "width:150px; height: 150px;"/>
+            <img class = "img-circle" src = "images/person.jpg" style = "width:120px; height: 120px;"/>
           </div>
            </td>
         </tr>
@@ -124,7 +124,7 @@
 
 
       
-
+<br /><br /><br /><br /><br />
 <hr class = "colorgraph_h1" />
 
 <table>
@@ -136,11 +136,11 @@
         <td>
 
 
-              <button type="button" class="btn btn-success btn-lg" id="">
+              <button type="button" class="btn btn-success btn-lg" id="up">
               <span class="glyphicon glyphicon-upload"></span> Upload document
               </button>
 
-                <dialog class="mdl-dialog" style = "background-color:white; width:500px;">
+                <dialog class="mdl-dialog" style = "background-color:white; width:500px;" id ="u">
                   <div class="mdl-dialog__content">
                     <div id ="documentsMain">
                     <table>
@@ -183,8 +183,8 @@
                   </div>
                 </dialog>
                 <script>
-                  var dialog = document.querySelector('dialog');
-                  var showModalButton = document.querySelector('.btn-info');
+                  var dialog = document.querySelector('#u');
+                  var showModalButton = document.querySelector('.btn-success');
                   if (! dialog.showModal) {
                     dialogPolyfill.registerDialog(dialog);
                   }
@@ -275,7 +275,7 @@
 </div>
 
              
-
+            
 
             <dialog class="mdl-dialog" id = "d" style = "background-color:white; width:500px;">
                   <div class="mdl-dialog__content">
@@ -299,22 +299,24 @@
 
                   </div>
                 </dialog>
+
+
                 <script>
-                  var dialog = document.querySelector('#d');
+                  var dialog2 = document.querySelector('#d');
                   var showModalButton = document.querySelector('#delete');
-                  if (! dialog.showModal) {
-                    dialogPolyfill.registerDialog(dialog);
+                  if (! dialog2.showModal) {
+                    dialogPolyfill.registerDialog(dialog2);
                   }
                   showModalButton.addEventListener('click', function() {
-                    dialog.showModal();
+                    dialog2.showModal();
                   });
-                  dialog.querySelector('.btn-danger').addEventListener('click', function() {
-                    dialog.close();
+                  dialog2.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog2.close();
                   });
                 </script>    
 
-
-
+                
+          
 
 
 
