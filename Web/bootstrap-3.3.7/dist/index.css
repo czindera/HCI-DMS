@@ -102,10 +102,13 @@ td {
   width: 50px;
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+#LogoImage {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top:20%;
+  left:0%;
+  background-color: white;
 }
 
 #th1 {
