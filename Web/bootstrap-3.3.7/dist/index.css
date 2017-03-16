@@ -136,7 +136,7 @@ tr:nth-child(even) {
 }
 
 
-#save {
+#save, #save1, #save2, #save3, #save4, #save5{
   width: 150px;
   display: block;
   margin: auto;

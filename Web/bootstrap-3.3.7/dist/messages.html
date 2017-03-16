@@ -65,7 +65,7 @@
             <li role="presentation"><a class = "nav" href="profile.html">Profile</a></li>
             <li role="presentation"><a class = "nav" href="documents.html">Documents</a></li>
             <li role="presentation"><a class = "nav" href="tags.html">Tags</a></li>
-            <li role="presentation" class="active"><a href="messages.html">Messages</a></li>
+            <li role="presentation" class="active"><a href="messages.html">Messages<span class="badge">4</span></a></li>
             <li role="presentation"><form class="navbar-form navbar-left" role="search">
               <div class="form-group"><input type="text" class="form-control" placeholder="Search"></div>
                 <button type="submit" class="btn btn-default">Submit</button></form></li>
@@ -144,32 +144,152 @@
     </tr>
     <tr id="messagerow">
       <td>Assignment2</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
+      <td><button class = "btn btn-xs btn-success btn-block" id='save1'>Add Comment
       <span class="glyphicon glyphicon-comment"></span></button></td>
     </tr>
     <tr id="messagerow">
       <td>Assignment3</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
+      <td><button class = "btn btn-xs btn-success btn-block" id='save2'>Add Comment
       <span class="glyphicon glyphicon-comment"></span></button></td>
     </tr>
     <tr id="messagerow">
       <td>Assignment4</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
+      <td><button class = "btn btn-xs btn-success btn-block" id='save3'>Add Comment
       <span class="glyphicon glyphicon-comment"></span></button></td>
     </tr>
     <tr id="messagerow">
       <td>Assignment5</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
+      <td><button class = "btn btn-xs btn-success btn-block" id='save4'>Add Comment
       <span class="glyphicon glyphicon-comment"></span></button></td>
     </tr>
     <tr id="messagerow">
       <td>Assignment6</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
+      <td><button class = "btn btn-xs btn-success btn-block" id='save5'>Add Comment
       <span class="glyphicon glyphicon-comment"></span></button></td>
     </tr>
 </table>
 </div>
 
+<dialog class="mdl-dialog" id = "d" style = "background-color:white; width:500px;">
+                  <div class="mdl-dialog__content">
+                    <div id ="documentsMain">
+                       <h1>Document 1</h1>
+                        <div id ="documentsMain">
+                          <table>
+                          
+                          <tr>
+                            <td>Title:<td><td> <input type ="text"></td>
+                          </tr>
+                          <tr>
+                            <td>Comment:<td><td><textarea> </textarea></td>
+                          </tr>
+                          
+                          </table>    
+
+
+
+                    </div> 
+                    </div>  
+                  </div>
+                  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <button type="button" class="btn btn-success btn-lg">Post Comment</button>
+                    </div>  
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                     <button type="button" class="btn btn-danger btn-lg">Cancel</button>
+                    </div> 
+                  
+
+
+                  </div>
+                </dialog>
+
+
+                <script>
+                  var dialog2 = document.querySelector('#d');
+                  var showModalButton = document.querySelector('#save');
+                  if (! dialog2.showModal) {
+                    dialogPolyfill.registerDialog(dialog2);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog2.showModal();
+                  });
+                  dialog2.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog2.close();
+                  });
+                </script>
+
+                <script>
+                  var dialog2 = document.querySelector('#d');
+                  var showModalButton = document.querySelector('#save1');
+                  if (! dialog2.showModal) {
+                    dialogPolyfill.registerDialog(dialog2);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog2.showModal();
+                  });
+                  dialog2.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog2.close();
+                  });
+                </script>
+
+                <script>
+                  var dialog2 = document.querySelector('#d');
+                  var showModalButton = document.querySelector('#save2');
+                  if (! dialog2.showModal) {
+                    dialogPolyfill.registerDialog(dialog2);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog2.showModal();
+                  });
+                  dialog2.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog2.close();
+                  });
+                </script>
+
+                <script>
+                  var dialog2 = document.querySelector('#d');
+                  var showModalButton = document.querySelector('#save3');
+                  if (! dialog2.showModal) {
+                    dialogPolyfill.registerDialog(dialog2);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog2.showModal();
+                  });
+                  dialog2.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog2.close();
+                  });
+                </script>
+
+                <script>
+                  var dialog2 = document.querySelector('#d');
+                  var showModalButton = document.querySelector('#save4');
+                  if (! dialog2.showModal) {
+                    dialogPolyfill.registerDialog(dialog2);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog2.showModal();
+                  });
+                  dialog2.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog2.close();
+                  });
+                </script>
+
+                <script>
+                  var dialog2 = document.querySelector('#d');
+                  var showModalButton = document.querySelector('#save5');
+                  if (! dialog2.showModal) {
+                    dialogPolyfill.registerDialog(dialog2);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog2.showModal();
+                  });
+                  dialog2.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog2.close();
+                  });
+                </script>
  
 
 </div>
