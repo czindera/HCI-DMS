@@ -93,17 +93,17 @@
         </div>
     </th>
     <th>
-      <div id="messagestitle">
+      <div id="messagestitle" style = "position: absolute; left: 30%;">
        <h1>Tags</h1>
     </div>
     </th>
     <th>
-      <div id = "user"> 
+      <div id = "user" style="position: absolute; left: 80%; top: 10%;"> 
       <table>
         <tr>
           <td>
           <div id="pratik">
-            <img class = "img-circle" src = "images/person.jpg" style = "width:150px; height: 150px;"/>
+            <img class = "img-circle" src = "images/person.jpg" style = "width:120px; height: 120px;"/>
           </div>
            </td>
         </tr>
@@ -123,96 +123,22 @@
     </tr>
   </table>
 </div>
+<br /><br /><br /><br /><br />
 
 <hr class = "colorgraph_h1" />
 
-<table>
-      <tr>
-        <td>
-           <h3><span id='loggedInAs'></span></h3>
-        </td>
-        <td><p>  </p></td>
-        <td>
-
-
-              <button type="button" class="btn btn-success btn-lg" id="">
-              <span class="glyphicon glyphicon-plus"></span> Create Tag
-              </button>
-
-                <dialog class="mdl-dialog" style = "background-color:white; width:500px;">
-                  <div class="mdl-dialog__content">
-                    <div id ="documentsMain">
-                    <table>
-                    <tr>
-                      <td>File:<td><td> <input type ="file"></td>
-                    </tr>
-                    <tr>
-                      <td>Additional Owners:<td><td> <input type ="text"></td>
-                    </tr>
-                    <tr>
-                      <td>Description:<td><td><textarea> </textarea></td>
-                    </tr>
-                    <tr>
-                      <td>Additional Owners:<td><td> <input type ="text"></td>
-                    </tr>
-                    <tr>
-                      <td>Tags:<td><td><span> <input type ="text"><button>generate tags</button></span></td>
-                    </tr>
-                     <tr>
-                      <td>Private:<td><td><input type ="checkbox" checked = "checked"></td>
-                    </tr>
-                    </table>    
-
-
-
-                    </div>  
-                  </div>
-                  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
-
-
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                      <button type="button" class="btn btn-success btn-lg">Upload</button>
-                    </div>  
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                     <button type="button" class="btn btn-danger btn-lg">Cancel</button>
-                    </div> 
-                  
-
-
-                  </div>
-                </dialog>
-                <script>
-                  var dialog = document.querySelector('dialog');
-                  var showModalButton = document.querySelector('.btn-info');
-                  if (! dialog.showModal) {
-                    dialogPolyfill.registerDialog(dialog);
-                  }
-                  showModalButton.addEventListener('click', function() {
-                    dialog.showModal();
-                  });
-                  dialog.querySelector('.btn-danger').addEventListener('click', function() {
-                    dialog.close();
-                  });
-                </script>              
-
-
-          </td>
-          <td>
+               <button class="btn btn-success btn-lg" id = 'listDocumentsButton'>
+               <span class="glyphicon glyphicon-plus"></span> Create Tag
+               </button>
 
                <button class="btn btn-warning btn-lg" id = 'listDocumentsButton'>
                <span class="glyphicon glyphicon-pencil"></span> Edit Tag
                </button>
-               </div>
 
-        </div>
-     </td>
-          <td>
+       
             <a href = "tags.html"><button class="btn btn-danger btn-lg" id="tagpagebutton">
             <span class="glyphicon glyphicon-remove"></span>Delete Tag</button>
-          </td>
-
-      </tr>
-    </table>
+         
 
   </body>
 </html>
