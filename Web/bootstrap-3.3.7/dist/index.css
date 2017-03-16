@@ -79,6 +79,8 @@ td {
 
 #save {
   width:480px;
+  text-align: center;
+  left: 35%;
 }
 
 .image-circle {

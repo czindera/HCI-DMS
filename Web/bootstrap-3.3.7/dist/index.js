@@ -24,7 +24,10 @@ $(function(){
 		});
 		
 
-
+function getUsername() {
+	var input = document.getElementById("username").value;
+	return input;
+}
 
 
 
