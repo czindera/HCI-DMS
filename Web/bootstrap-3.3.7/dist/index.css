@@ -102,24 +102,18 @@ td {
   width: 50px;
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+#LogoImage {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top:20%;
+  left:0%;
+  background-color: white;
 }
 
-#th1 {
-    text-align: center;
-    padding: 8px;
-    background-color: #3d4d5c;
-}
 
-td, th{
-    text-align: center;
-    padding: 8px;
-}
 
-tr:nth-child(even) {
-    background-color: #8bdac0;
-}
+
+
+
 
