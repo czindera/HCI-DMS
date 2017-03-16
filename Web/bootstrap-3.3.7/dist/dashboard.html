@@ -60,6 +60,7 @@
             <li role="presentation" class="active"><a class = nav href="#">Home</a></li>
             <li role="presentation"><a class = "nav" href="profile.html">Profile</a></li>
             <li role="presentation"><a href="messages.html">Messages <span class="badge">4</span></a></li>
+            <li role="presentation"><a href = "index.html"><button class = "btn btn-md btn-danger" type='button' id='logOutButton'>Log out</button></a></li>
           </ul>
 
           <!--
@@ -74,13 +75,27 @@
       
       </div>
     </nav>
-        <div id = "LogoImage"><img src = "images/logo.png" /> </div>
-
-    <div id = "user"> 
+        <div class="container"> 
+  <table style="width:100%">
+  <tr id="header1">
+    <th>
+       <div id="profilelogo">
+          <a href = "dashboard.html"><img src = "images/logo.png" align="left" /></a>
+        </div>
+    </th>
+    <th>
+      <div id="messagestitle">
+       <h1>Welcome To DMS Box</h1>
+    </div>
+    </th>
+    <th>
+      <div id = "user"> 
       <table>
         <tr>
           <td>
+          <div id="pratik">
             <img class = "img-circle" src = "images/person.jpg" style = "width:150px; height: 150px;"/>
+          </div>
            </td>
         </tr>
         <tr> 
@@ -95,23 +110,28 @@
          </tr>
       </table>   
     </div>
+    </th>
+    </tr>
+  </table>
+</div>
 
 
 
 
-    <table>
+      
+
+<hr class = "colorgraph_h1" />
+
+<table>
       <tr>
         <td>
            <h3><span id='loggedInAs'></span></h3>
         </td>
         <td><p>  </p></td>
         <td>
-          <a href = "index.html"><button class = "btn btn-md btn-success" type='button' id='logOutButton'>Log out</button></a>
-        </td>
-        <td>
 
 
-              <button type="button" class="btn btn-info btn-lg" id="">
+              <button type="button" class="btn btn-success btn-lg" id="">
               <span class="glyphicon glyphicon-upload"></span> Upload document
               </button>
 
@@ -183,13 +203,15 @@
                <div id='uploadDocumentPane'></div>
                <div id='listDocumentsPane'></div>
               </div>
-    </div>
-  </td>
+        </div>
+     </td>
+          <td>
+            <a href = "tags.html"><button class="btn btn-info btn-lg" id="tagpagebutton">
+            <span class="glyphicon glyphicon-tag"></span>Tags</button>
+          </td>
 
       </tr>
-    </table>  
-
-<hr class = "colorgraph_h1" />
+    </table>
 
 
 <table>
