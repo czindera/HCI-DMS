@@ -63,7 +63,7 @@
           <ul class="nav nav-pills" role="tablist">
             <li role="presentation"><a class = nav href="dashboard.html">Home</a></li>
             <li role="presentation"><a class = "nav" href="profile.html">Profile</a></li>
-            <li role="presentation" class="active"><a href="messages.html">Messages</a></li>
+            <li role="presentation"><a href="messages.html">Messages</a></li>
             <li role="presentation"><a href = "index.html"><button class = "btn btn-md btn-danger" type='button' id='logOutButton'>Log out</button></a></li>
           </ul>
 
@@ -79,8 +79,7 @@
       
       </div>
     </nav>
-    
-  <div class="container"> 
+<div class="container"> 
   <table style="width:100%">
   <tr id="header1">
     <th>
@@ -90,7 +89,7 @@
     </th>
     <th>
       <div id="messagestitle">
-       <h1>Messages</h1>
+       <h1>Tags</h1>
     </div>
     </th>
     <th>
@@ -122,59 +121,96 @@
 
 <hr class = "colorgraph_h1" />
 
-<div class="container" id="container1">
-
-  <table style="width: 50%">
-  <col width="35%">
-  <col width="35%">
-  <div id="messagerow">
-    <tr id="messagerow">
-      <th id="th1" style="color: white">File</th>
-      <th id="th2" style="color: white">Discussion</th>
-    </tr>
-    <tr id="messagerow">
-      <td>Assignment1</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
-      <span class="glyphicon glyphicon-comment"></span></button></td>
-    </tr>
-    <tr id="messagerow">
-      <td>Assignment2</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
-      <span class="glyphicon glyphicon-comment"></span></button></td>
-    </tr>
-    <tr id="messagerow">
-      <td>Assignment3</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
-      <span class="glyphicon glyphicon-comment"></span></button></td>
-    </tr>
-    <tr id="messagerow">
-      <td>Assignment4</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
-      <span class="glyphicon glyphicon-comment"></span></button></td>
-    </tr>
-    <tr id="messagerow">
-      <td>Assignment5</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
-      <span class="glyphicon glyphicon-comment"></span></button></td>
-    </tr>
-    <tr id="messagerow">
-      <td>Assignment6</td>
-      <td><button class = "btn btn-xs btn-success btn-block" id='save'>Add Comment
-      <span class="glyphicon glyphicon-comment"></span></button></td>
-    </tr>
-</table>
-</div>
-
- 
-
-</div>
-  <hr />
- <footer>
-    <br /><br />
-    <p>&copy; 2017 DMSbox.com. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer> 
+<table>
+      <tr>
+        <td>
+           <h3><span id='loggedInAs'></span></h3>
+        </td>
+        <td><p>  </p></td>
+        <td>
 
 
+              <button type="button" class="btn btn-info btn-lg" id="">
+              <span class="glyphicon glyphicon-upload"></span> Upload document
+              </button>
+
+                <dialog class="mdl-dialog" style = "background-color:white; width:500px;">
+                  <div class="mdl-dialog__content">
+                    <div id ="documentsMain">
+                    <table>
+                    <tr>
+                      <td>File:<td><td> <input type ="file"></td>
+                    </tr>
+                    <tr>
+                      <td>Additional Owners:<td><td> <input type ="text"></td>
+                    </tr>
+                    <tr>
+                      <td>Description:<td><td><textarea> </textarea></td>
+                    </tr>
+                    <tr>
+                      <td>Additional Owners:<td><td> <input type ="text"></td>
+                    </tr>
+                    <tr>
+                      <td>Tags:<td><td><span> <input type ="text"><button>generate tags</button></span></td>
+                    </tr>
+                     <tr>
+                      <td>Private:<td><td><input type ="checkbox" checked = "checked"></td>
+                    </tr>
+                    </table>    
+
+
+
+                    </div>  
+                  </div>
+                  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <button type="button" class="btn btn-success btn-lg">Upload</button>
+                    </div>  
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                     <button type="button" class="btn btn-danger btn-lg">Cancel</button>
+                    </div> 
+                  
+
+
+                  </div>
+                </dialog>
+                <script>
+                  var dialog = document.querySelector('dialog');
+                  var showModalButton = document.querySelector('.btn-info');
+                  if (! dialog.showModal) {
+                    dialogPolyfill.registerDialog(dialog);
+                  }
+                  showModalButton.addEventListener('click', function() {
+                    dialog.showModal();
+                  });
+                  dialog.querySelector('.btn-danger').addEventListener('click', function() {
+                    dialog.close();
+                  });
+                </script>              
+
+
+          </td>
+          <td>
+
+               <button class="btn btn-warning btn-lg" id = 'listDocumentsButton'>
+               <span class="glyphicon glyphicon-sort-by-attributes"></span> List All Documents
+               </button>
+               </div>
+              <div id='documentsMain'>
+               <div id='uploadDocumentPane'></div>
+               <div id='listDocumentsPane'></div>
+              </div>
+        </div>
+     </td>
+          <td>
+            <a href = "tags.html"><button class="btn btn-info btn-lg" id="tagpagebutton">
+            <span class="glyphicon glyphicon-tag"></span>Tags</button>
+          </td>
+
+      </tr>
+    </table>
 
   </body>
 </html>
