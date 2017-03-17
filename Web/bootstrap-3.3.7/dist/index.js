@@ -41,8 +41,6 @@ function getUsername() {
 
 
 
-
-
 		
 		function updateDisplay() {
 			var isChecked = $checkbox.is(':checked');
