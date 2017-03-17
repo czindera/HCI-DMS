@@ -205,6 +205,6 @@ tr:nth-child(even) {
   position: relative;
 }
 
-#popup {
-
+#up1 {
+  float:left;
 }
